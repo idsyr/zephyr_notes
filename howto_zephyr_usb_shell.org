@@ -39,7 +39,7 @@ const struct device *dev = DEVICE_DT_GET(DT_CHOSEN(zephyr_shell_uart));
 static uint32_t dtr = 0;
 
 int subcmd_love(const struct shell *sh, size_t argc, char **argv) {
-	shell_print(sh, "no war");
+	shell_print(sh, "Not war.");
 	return 0;
 }
 
