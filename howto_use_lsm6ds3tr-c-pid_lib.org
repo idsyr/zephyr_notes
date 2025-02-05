@@ -24,3 +24,17 @@ stmdev_ctx_t ctx = {
     .handle    = DEVICE_DT_GET(DT_NODELABEL(i2c0)),
 };
 #+end_src
+
+* .dts
+#+begin_src dts
+freefall_int: accel_intpin1 {
+	gpios = <&gpio<X1> <X2> (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>;
+	label = "i am the event when you come for freefall";
+	zephyr,code = <INPUT_KEY_DOWN>;
+};
+activity_int: accel_intpin2 {
+	gpios = <&gpio<Y1> <Y2> (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>;
+	label = "i am the event when you come for activity";
+	zephyr,code = <INPUT_KEY_WAKEUP>;
+};
+#+end_src
